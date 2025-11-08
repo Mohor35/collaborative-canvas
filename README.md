@@ -14,7 +14,7 @@ A multi-user drawing application where multiple people can draw simultaneously o
 
 ## 🚀 Live Demo
 
-*Deployment in progress - Update this link after deployment*
+# Live Demo: https://collaborative-canvas-production-c7a8.up.railway.app
 
 ## 🛠️ Technology Stack
 
@@ -171,3 +171,4 @@ Export functionality
 Adrija Adhikary
 
 GitHub: @Mohor35
+
