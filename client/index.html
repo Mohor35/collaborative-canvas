@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>Collaborative Canvas</h1>
+            <div class="user-info">
+                <span id="userCount">0 users online</span>
+                <div id="userList"></div>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <div class="tool-group">
+                <button class="tool-btn active" data-tool="brush" title="Brush">✏️</button>
+                <button class="tool-btn" data-tool="eraser" title="Eraser">🧽</button>
+            </div>
+            
+            <div class="tool-group">
+                <input type="color" id="colorPicker" value="#000000" title="Color">
+                <input type="range" id="brushSize" min="1" max="50" value="5" title="Brush Size">
+                <span id="brushSizeValue">5px</span>
+            </div>
+
+            <div class="tool-group">
+                <button id="undoBtn" title="Undo">↩️</button>
+                <button id="redoBtn" title="Redo">↪️</button>
+                <button id="clearBtn" title="Clear Canvas">🗑️</button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="mainCanvas"></canvas>
+            <canvas id="cursorCanvas"></canvas>
+            <div id="cursorOverlay"></div>
+        </div>
+
+        <div class="status-bar">
+            <span id="status">Connected</span>
+        </div>
+    </div>
+
+    <!-- Load Socket.io from CDN since it's not loading from server -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="canvas.js"></script>
+    <script src="websocket.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
